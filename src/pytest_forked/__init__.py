@@ -70,6 +70,7 @@ def forked_run_report(item):
             os._exit(EXITSTATUS_TESTEXIT)
         return marshal.dumps([serialize_report(x) for x in reports])
 
+    raise ValueError(py.__file__)
     ff = py.process.ForkedFunc(runforked)
     result = ff.waitfinish()
     if result.retval is not None:
